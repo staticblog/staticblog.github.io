@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+  {% include head.html %}
+
+  <body itemscope itemtype="http://schema.org/WebPage">
+
+    <div class="container content">
+      {% include header.html %}
+      <main>
+        {{ content }}
+      </main>
+      {% if site.data.social.disqus_shortname and page.comments == true %}
+      <div id="disqus_thread"></div>
+      {% endif %}
+      {% include footer.html %}
+    </div>
+
+    {% include scripts.html %}
+  </body>
+</html>

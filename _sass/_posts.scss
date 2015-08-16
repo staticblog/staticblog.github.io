@@ -1,0 +1,113 @@
+// Posts and pages
+//
+// Each post is wrapped in `.post` and is used on default and post layouts. Each
+// page is wrapped in `.page` and is only used on the page layout.
+
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+// Blog post or page title
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+.post-meta {
+  display: block;
+}
+
+// Meta data line below post title
+.post-date {
+  /* display: block; */
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
+.avatar {
+  margin: 0 0 -.2rem;
+  display: inline-block;
+}
+
+// Related posts
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    small {
+      font-size: 75%;
+      color: #999;
+    }
+
+    a:hover {
+      color: #268bd2;
+      text-decoration: none;
+
+      small {
+        color: inherit;
+      }
+    }
+  }
+}
+
+/* tag_box */
+.tag_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.tag_box li {
+  line-height: 2.5rem;
+}
+
+.tag_box li i {
+  opacity: 0.9;
+}
+
+.tag_box.inline li {
+  float: left;
+}
+
+.tag_box a {
+  padding: .25rem .5rem;
+  margin: .25rem;
+  background: #eee;
+  color: #555;
+  border-radius: 3px;
+  text-decoration: none;
+  border: .125rem dashed #cccccc;
+}
+
+.tag_box a span {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+.tag_box a:hover {
+  background-color: #e5e5e5;
+}
+
+.tag_box a.active {
+  background: #57A957;
+  border: 1px solid #4c964d;
+  color: #FFF;
+}

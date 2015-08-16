@@ -1,0 +1,26 @@
+<li class="listing">
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">{{ post.date | date_to_string }}</time>
+    {% if post.author %}
+    <a href="https://github.com/{{ post.author }}" class="post-author" rel="author" itemprop="url">
+      <img src="https://github.com/{{ post.author }}.png" class="avatar" alt="{{ post.author }} avatar" width="24" height="24">
+    </a>
+    {% else %}
+    <a href="{{ site.github.owner_url }}" class="post-author" rel="author" itemprop="url">
+        <img src="{{ site.github.owner_gravatar_url }}" class="avatar" alt="{{ site.github.owner_name }} avatar" width="24" height="24">
+    </a>
+    {% endif %}
+
+    {% if site.excerpt_separator %}
+    {{ post.excerpt }}
+    {% else %}
+    {{ post.content }}
+    {% endif %}
+  </article>
+</li>

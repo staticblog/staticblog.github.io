@@ -1,0 +1,72 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}{{ site.keywords }}{% endif %}">
+
+  {% if site.data.social.twitter %}
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:creator" content="@{{ site.data.social.twitter }}">
+  {% endif %}
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | prepend: site.baseurl }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  {% if site.data.social.gplus %}
+  <link rel="author" href="{{ site.data.social.gplus }}?rel=author">
+  {% endif %}
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  <!-- Chrome Color -->
+  <meta name="theme-color" content="#3372DF">
+
+  <!-- Windows8 Tile -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!-- Icons -->
+  {% if site.favicon %}
+  <link rel="shortcut icon" href="{{ site.favicon }}">
+  {% endif %}
+
+  <!-- Webmaster Verify -->
+  {% if site.data.webmaster.google_verify %}
+  <meta name="google-site-verification" content="{{ site.data.webmaster.google_verify }}">
+  {% endif %}
+  {% if site.data.webmaster.bing_verify %}
+  <meta name="msvalidate.01" content="{{ site.data.webmaster.bing_verify }}">
+  {% endif %}
+  {% if site.data.webmaster.baidu_verify %}
+  <meta name="baidu-site-verification"  content="{{ site.data.webmaster.baidu_verify }}">
+  {% endif %}
+
+  <!-- Web Analytics -->
+  {% if site.data.webmaster.google_analytics %}
+  {% include google_analytics.html %}
+  {% endif %}
+  {% if site.data.webmaster.baidu_analytics %}
+  {% include baidu_analytics.html %}
+  {% endif %}
+
+  <!-- MathJax -->
+  {% if page.mathjax %}
+  <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  {% endif %}
+</head>

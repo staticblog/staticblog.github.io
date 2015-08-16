@@ -1,0 +1,86 @@
+# Site settings
+title: static blog
+subtitle: build every theme with love.
+email: i@ibrother.me
+lang: zh-CN # for html lang
+description: > # this means to ignore newlines until "baseurl:"
+  我们是一个专注于模板设计与制作的团队
+keywords: "blog, theme, template, html, css, jekyll, hexo"
+favicon: http://ibrother.qiniudn.com/favicon.ico
+highlighting-style: monokai
+branch: master
+
+# Where things are
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+data_source: ./_data
+collections: null
+
+# Handling Reading
+safe:         false
+include:      [".htaccess"]
+exclude:      [vendor]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      true
+unpublished: false
+
+# Plugins
+whitelist: []
+gems:      ["jekyll-mentions", "jemoji", "jekyll-redirect-from"]
+
+# Conversion
+markdown:    kramdown
+highlighter: pygments
+lsi:         false
+excerpt_separator: "<!--more-->"
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+url: "http://staticblog.github.io" # the base hostname & protocol for your site
+
+# Outputting
+permalink:     date
+paginate: 6
+paginate_path: /page:num
+timezone:      Asia/Shanghai
+
+quiet:    false
+defaults: []
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+  coderay:
+    coderay_wrap:              div
+    coderay_line_numbers:      inline
+    coderay_line_number_start: 1
+    coderay_tab_width:         4
+    coderay_bold_every:        10
+    coderay_css:               style
+
+sass:
+    sass_dir: _sass
+    style: :compressed
