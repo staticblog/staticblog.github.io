@@ -14,6 +14,143 @@ footer {
   margin-bottom: 2rem;
 }
 
+/*Footer*/
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer.footer .col {
+    float: left;
+    width: 50%;
+    padding-bottom: 2rem;
+}
+
+footer.footer .col h3 {
+    position: relative;
+    padding: .5rem 0;
+}
+
+footer.footer .col h3:before {
+    content: '';
+    -webkit-transition: all .35s ease-in;
+    transition: all .35s ease-in;
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2px;
+    background: #aaaaaa;
+    overflow: hidden;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+footer.footer .col:hover h3:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+footer.footer .col .links li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+footer.footer .col .links li a {
+    color: #111;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+}
+
+footer.footer .col .links li a:hover {
+    color: #bce72d;
+}
+
+footer.footer .col .links .icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: #f9f7f3;
+    background-image: url(./images/socials-icons.svg);
+    background-size: 224px 64px;
+    border-radius: 0.25em;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    border-bottom-color: transparent;
+}
+
+footer.footer .col .links .icon:hover {
+    background-color: #bce72d;
+}
+
+footer.footer .col .links .icon.twitter {
+    background-position: 0px 0px;
+}
+
+footer.footer .col .links .icon.twitter:hover {
+    background-position: 0px -32px;
+}
+
+footer.footer .col .links .icon.github {
+    background-position: -32px 0;
+}
+
+footer.footer .col .links .icon.github:hover {
+    background-position: -32px -32px;
+}
+
+footer.footer .col .links .icon.facebook {
+    background-position: -64px 0;
+}
+
+footer.footer .col .links .icon.facebook:hover {
+    background-position: -64px -32px;
+}
+
+footer.footer .col .links .icon.dribbble {
+    background-position: -96px 0;
+}
+
+footer.footer .col .links .icon.dribbble:hover {
+    background-position: -96px -32px;
+}
+
+footer.footer .col .links .icon.google {
+    background-position: -128px 0px;
+}
+
+footer.footer .col .links .icon.google:hover {
+    background-position: -128px -32px;
+}
+
+footer.footer .col .links .icon.feed {
+    background-position: -160px 0px;
+}
+
+footer.footer .col .links .icon.feed:hover {
+    background-position: -160px -32px;
+}
+
+footer.footer .col .links .icon.pinterest {
+    background-position: -192px 0px;
+}
+
+footer.footer .col .links .icon.pinterest:hover {
+    background-position: -192px -32px;
+}
+
+@media screen and (max-width: 768px) {
+    footer.footer .col {
+        width: 100%;
+        float: none;
+    }
+}
+
+/*Footer end*/
+
 .footer {
   margin-top: 1rem;
   padding-top: 1rem;

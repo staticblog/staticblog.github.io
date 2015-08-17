@@ -123,6 +123,6 @@ Open sourced under the [MIT license](LICENSE.md).
 ## Todo
 
 - [x] categories and tags pages
-- [ ] post-header: edit on github button
+- [x] post-header: edit on github button
 - [ ] post-footer: author, avatar, share links and etc..
-- [ ] footer: blog rolls and social links
+- [x] footer: blog rolls and social links

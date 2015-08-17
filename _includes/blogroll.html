@@ -1,0 +1,8 @@
+<section class="col">
+  <h3>Links</h3>
+    <ul class="links">
+      {% for roll in site.data.rolls %}
+      <li><a href="{{ roll.url }}" rel="friend" target="_blank">{{ roll.title }}</a></li>
+      {% endfor %}
+    </ul>
+</section>
