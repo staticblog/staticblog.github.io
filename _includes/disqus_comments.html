@@ -2,7 +2,7 @@
     /* * * CONFIGURATION VARIABLES * * */
 var disqus_shortname = '{{ site.data.social.disqus_shortname  }}';
 var disqus_identifier = '{{ page.id }}';
-var disqus_title = '{{ page.title }}';
+var disqus_title = '{{ page.title | replace:"'", "\\'" }}';
 var disqus_url = '{{ page.url | prepend: site.baseurl | prepend: site.url }}';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
