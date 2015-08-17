@@ -1,0 +1,64 @@
+<section class="col">
+  <h3>Follow Me</h3>
+    <ul class="links">
+      {% if site.data.social.twitter %}
+    <li>
+        <a title="{{ site.data.social.twitter }} on Twitter"
+            href="https://twitter.com/{{ site.data.social.twitter }}"
+            class="icon twitter" target="_blank"></a>
+    </li>
+    {% endif %}
+
+    {% if site.data.social.github %}
+    <li>
+        <a title="{{ site.data.social.github }} on Github"
+            href="https://github.com/{{ site.data.social.github }}"
+            class="icon github" target="_blank"></a>
+    </li>
+    {% else %}
+    <li>
+        <a title="{{ site.github.owner_name }} on Github"
+            href="{{ site.github.owner_url }}"
+            class="icon github" target="_blank"></a>
+    </li>
+    {% endif %}
+
+    {% if site.data.social.facebook %}
+    <li>
+        <a title="{{ site.data.social.facebook }} on Facebook"
+            href="https://facebook.com/{{ site.data.social.facebook }}"
+            class="icon facebook" target="_blank"></a>
+    </li>
+    {% endif %}
+
+    {% if site.data.social.gplus %}
+    <li>
+        <a title="{{ site.data.social.gplus }} on Google Plus"
+            href="https://plus.google.com/{{ site.data.social.gplus }}"
+            class="icon google" target="_blank"></a>
+    </li>
+    {% endif %}
+
+    {% if site.data.social.dribble %}
+    <li>
+        <a title="{{ site.data.social.dribble }} on Dribble"
+            href="https://dribbble.com/{{ site.data.social.dribble }}"
+            class="icon dribble" target="_blank"></a>
+    </li>
+    {% endif %}
+
+    {% if site.data.social.pinterest %}
+    <li>
+        <a title="{{ site.data.social.pinterest }} on Pinterest"
+            href="https://www.pinterest.com/{{ site.data.social.pinterest }}"
+            class="icon pinterest" target="_blank"></a>
+    </li>
+    {% endif %}
+
+     <li>
+        <a title="Atom Feed"
+            href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"
+            class="icon feed" target="_blank"></a>
+    </li>
+    </ul
+</section>
