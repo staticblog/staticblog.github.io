@@ -50,7 +50,7 @@ baseurl: "" # does not include hostname
 url: "http://staticblog.github.io" # the base hostname & protocol for your site
 
 # Outputting
-permalink:     date
+permalink:     /:categories/:title
 paginate: 6
 paginate_path: /page:num
 timezone:      Asia/Shanghai
