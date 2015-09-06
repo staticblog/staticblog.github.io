@@ -117,13 +117,12 @@ a[href^="#fnref:"] {
 
 .listing {
   list-style-type: none;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: .25rem dotted #efefef;
+  padding: 1rem 0 1rem 2rem;
+  border-left: .25rem dotted #efefef;
 }
 
 .listing:hover {
-  border-top: .25rem dotted #bce72d;
+  border-left: .25rem dotted #bce72d;
 }
 
 // Custom type
