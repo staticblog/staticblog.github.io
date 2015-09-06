@@ -1,20 +1,20 @@
 <header class="masthead" itemscope itemtype="http://schema.org/Organization">
     <h3 class="masthead-title">
         <a href="{{ site.baseurl }}/" title="Home" itemprop="url">{{ site.title }}</a>
-        <nav class="navigation">
-            <ul>
-            {% for nav in site.data.navs %}
-            {% if nav.external %}
-                <li><small><a href="{{ nav.url }}" target="_blank">{{ nav.title }}</a></small></li>
-            {% else %}
-                {% if page.url == nav.url %}
-                <li><small><a href="{{ nav.url | prepend: site.baseurl }}" class="active" rel="bookmark">{{ nav.title }}</a></small></li>
-                {% else %}
-                <li><small><a href="{{ nav.url | prepend: site.baseurl }}" rel="bookmark">{{ nav.title }}</a></small></li>
-                {% endif %}
-            {% endif %}
-            {% endfor %}
-            </ul>
-        </nav>
     </h3>
+    <nav class="navigation">
+        <ul>
+        {% for nav in site.data.navs %}
+        {% if nav.external %}
+            <li><small><a href="{{ nav.url }}" target="_blank">{{ nav.title }}</a></small></li>
+        {% else %}
+            {% if page.url == nav.url %}
+            <li><small><a href="{{ nav.url | prepend: site.baseurl }}" class="active" rel="bookmark">{{ nav.title }}</a></small></li>
+            {% else %}
+            <li><small><a href="{{ nav.url | prepend: site.baseurl }}" rel="bookmark">{{ nav.title }}</a></small></li>
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+        </ul>
+    </nav>
 </header>
