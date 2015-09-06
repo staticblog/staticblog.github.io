@@ -9,6 +9,7 @@
 }
 
 .masthead-title {
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
@@ -25,10 +26,6 @@
   }
 }
 
-a.active {
-  color: #268bd2;
-}
-
 .navigation {
   float: right;
 }
@@ -39,4 +36,12 @@ a.active {
 
 .navigation ul li {
   display: inline-block;
+}
+
+.navigation a{
+  color: #000;
+}
+
+.navigation a.active {
+  color: #bce72d;
 }
