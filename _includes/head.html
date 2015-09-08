@@ -7,6 +7,7 @@
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}{{ site.keywords }}{% endif %}">
   <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.github.owner_name }}{% endif %}">
+  <meta name="generator" content="Jekyll">
 
   {% if site.data.social.twitter %}
   <!-- Twitter Cards -->
@@ -40,7 +41,8 @@
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
 
   <!-- Icons -->
   {% if site.favicon %}
