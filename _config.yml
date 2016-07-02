@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   我们是一个专注于模板设计与制作的团队
 keywords: "blog, theme, template, html, css, jekyll, hexo"
 favicon: http://ibrother.qiniudn.com/favicon.ico
-highlighting-style: monokai
+highlighting-style: monokai.sublime
 branch: master
 
 # Where things are
@@ -35,20 +35,21 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      ["jekyll-mentions", "jemoji", "jekyll-redirect-from"]
+gems:      ["jekyll-paginate", "jekyll-mentions", "jemoji", "jekyll-redirect-from"]
 
 # Conversion
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 lsi:         false
 excerpt_separator: "<!--more-->"
+incremental: false
 
 # Serving
 detach:  false
 port:    4000
 host:    127.0.0.1
 baseurl: "" # does not include hostname
-url: "http://staticblog.github.io" # the base hostname & protocol for your site
+url: "https://staticblog.github.io" # the base hostname & protocol for your site
 
 # Outputting
 permalink:     /:categories/:title
@@ -67,6 +68,7 @@ redcarpet:
   extensions: []
 
 kramdown:
+  input: GFM
   auto_ids:       true
   footnote_nr:    1
   entity_output:  as_char
