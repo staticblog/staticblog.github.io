@@ -35,7 +35,11 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      ["jekyll-paginate", "jekyll-mentions", "jemoji", "jekyll-redirect-from"]
+gems:
+  - jekyll-paginate
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
 
 # Conversion
 markdown:    kramdown

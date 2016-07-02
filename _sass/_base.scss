@@ -15,26 +15,23 @@ body {
 }
 
 html {
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  line-height: $root-line-height;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (min-width: 38em) {
-    font-size: 18px;
+  @media (min-width: $large-breakpoint) {
+    font-size: $large-font-size;
   }
 }
 
 body {
-  color: #111;
-  background-color: #ffffff;
-}
-
-body, button, input, select, textarea {
-  font-family: "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
+  color: $body-color;
+  background-color: $body-bg;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 ::-moz-selection{
@@ -72,7 +69,7 @@ body, button, input, select, textarea {
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  color: #268bd2;
+  color: $link-color;
   text-decoration: none;
 
   // `:focus` is linked to `:hover` for basic accessibility

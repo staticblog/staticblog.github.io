@@ -5,13 +5,13 @@
 
 code,
 pre {
-  font-family: "DejaVu Sans Mono", Menlo, Monaco, "Courier New", monospace;
+    font-family: $code-font-family;
 }
 
 code {
   padding: .25em .5em;
   font-size: 85%;
-  color: #bf616a;
+  color: $code-color;
   background-color: #f9f9f9;
   border-radius: 3px;
 }
@@ -31,6 +31,7 @@ pre {
 pre code {
   padding: 0;
   font-size: 100%;
+  color: inherit;
   background-color: transparent;
 }
 
@@ -39,14 +40,14 @@ pre code {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: .8rem;
-  overflow-x: auto;
-  border: .25rem solid #efefef;
-  border-radius: .5rem;
+  line-height: 1.4;
+  border: .5rem solid #efefef;
+  border-radius: .25rem;
   /* background-color: #f9f9f9; */
 
   pre {
     margin-bottom: 0;
-    /* overflow-x: auto; */
+    overflow-x: auto;
   }
 
   .lineno {
