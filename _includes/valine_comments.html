@@ -1,0 +1,10 @@
+<script>
+    window.onload = function() {
+        new Valine({
+            av: AV,
+            el: '.comment',
+            app_id: '{{ site.data.social.valine_comments.leancloud_appid }}',
+            app_key: '{{ site.data.social.valine_comments.leancloud_appkey }}'
+        });
+    }
+</script>
