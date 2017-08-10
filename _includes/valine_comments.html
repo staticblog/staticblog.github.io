@@ -2,7 +2,7 @@
     window.onload = function() {
         new Valine({
             av: AV,
-            el: '.comments',
+            el: '#comments',
             app_id: '{{ site.data.social.valine_comment.leancloud_appid }}',
             app_key: '{{ site.data.social.valine_comment.leancloud_appkey }}'
         });
